@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Triangle Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="canvas-container">
+        <canvas id="triangleCanvas"></canvas>
+    </div>
+
+    <div class="controls">
+        <h2>Triangle Controls</h2>
+        
+        <div class="settings">
+            <div class="setting-item">
+                <input type="checkbox" id="showLengths" checked>
+                <label for="showLengths">Show Side Lengths</label>
+            </div>
+            <div class="setting-item">
+                <input type="checkbox" id="showArea">
+                <label for="showArea">Show Area</label>
+            </div>
+            <div class="setting-item">
+                <input type="checkbox" id="useBigScale">
+                <label for="useBigScale">Use Large Scale</label>
+            </div>
+        </div>
+
+        <div class="preset-buttons">
+            <button class="preset-button" onclick="setEquilateral()">
+                <svg viewBox="0 0 60 60">
+                    <path d="M30 10 L50 45 L10 45 Z" fill="rgb(76, 187, 23)" stroke="black"/>
+                </svg>
+                Equilateral
+            </button>
+            <button class="preset-button" onclick="setRight()">
+                <svg viewBox="0 0 60 60">
+                    <path d="M10 45 L10 10 L50 45 Z" fill="red" stroke="black"/>
+                </svg>
+                Right
+            </button>
+            <button class="preset-button" onclick="setAcute()">
+                <svg viewBox="0 0 60 60">
+                    <path d="M20 45 L30 15 L40 45 Z" fill="aqua" stroke="black"/>
+                </svg>
+                Acute
+            </button>
+            <button class="preset-button" onclick="setObtuse()">
+                <svg viewBox="0 0 60 60">
+                    <path d="M10 45 L45 35 L15 35 Z" fill="orange" stroke="black"/>
+                </svg>
+                Obtuse
+            </button>
+        </div>
+
+        <div class="classic-triangles">
+            <h3>Classic Triangles</h3>
+            <div class="classic-buttons">
+                <button onclick="setTriangle([3,4,5])">3-4-5</button>
+                <button onclick="setTriangle([5,12,13])">5-12-13</button>
+                <button onclick="setTriangle([8,15,17])">8-15-17</button>
+                <button onclick="setTriangle([5,5,8])">5-5-8</button>
+                <button onclick="setTriangle([7,7,7])">7-7-7</button>
+                <button onclick="setTriangle([2,3,4])">2-3-4</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="drawtriangle.js"></script>
+</body>
+</html>
